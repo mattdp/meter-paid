@@ -14,8 +14,8 @@ module SchedulesHelper
     @account = @client.account
 
     @account.calls.create({
-      :from => '+14152382438', #MDP account
-      :to => '+15106936860',
+      :from => '+14152' + '382438', #MDP account, broken up to avoid harvesting by bot
+      :to => '+151069' + '36860',
       :url => 'http://meter-paid.herokuapp.com/twilio',
       :SendDigits => "#{format_extensions_and_delays(schedule, user)}"
     })
